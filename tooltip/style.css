@@ -1,0 +1,31 @@
+.arrow_box {
+	display: inline-block;
+	position: relative;
+	color: blue;
+}
+
+.arrow_box:after, .arrow_box:before {
+	display: none;
+	content: attr(data-title);
+	position: absolute;
+	top: 100%;
+	left: 50%; /* Положение подсказки */
+    z-index: 1; /* Отображаем подсказку поверх других элементов */
+    border-color: rgba(34, 36, 35, 0);
+	border-top-color: #222423;
+	background: #222423;
+	color: white;
+	border: solid transparent;
+	pointer-events: none;
+	border: 1px solid #303030;
+	border-radius: 5px;
+	border-color: rgba(48, 48, 48, 0);
+	border-top-color: #303030;
+	border-width: 15px;
+	margin-left: -10px;
+}
+
+.arrow_box:hover::after {
+	display: inline-block;
+}
+
